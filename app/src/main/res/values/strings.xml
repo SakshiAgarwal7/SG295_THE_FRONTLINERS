@@ -1,0 +1,9 @@
+<resources>
+    <array name="genrees">
+        <item>aadhar</item>
+        <item>phonenumber</item>
+        <item>sakshi</item>
+        <item>sakshi</item>
+    </array>
+    <string name="app_name">My Application</string>
+</resources>

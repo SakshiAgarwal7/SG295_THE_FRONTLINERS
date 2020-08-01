@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "423708145667",
+    "firebase_url": "https://vission-sikkim-new.firebaseio.com",
+    "project_id": "vission-sikkim-new",
+    "storage_bucket": "vission-sikkim-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423708145667:android:a4dfef4b9af9c1920a3636",
+        "android_client_info": {
+          "package_name": "com.example.vissionsikkimnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423708145667-at0i94lm8ppgkc0j0dbrhki1u4gdeuvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn-CMTRW8BGHGc1srT-WwT1qj1_YuJOUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423708145667-at0i94lm8ppgkc0j0dbrhki1u4gdeuvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
