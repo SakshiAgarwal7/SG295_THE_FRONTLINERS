@@ -25,6 +25,7 @@ public class adminhomepage extends AppCompatActivity {
         btnMyInfo = findViewById(R.id.btnMyInfo);
         btnUploadScheme = findViewById(R.id.btnUploadScheme);
         btnUpdateScheme = findViewById(R.id.btnUpdateScheme);
+        btnCustomerPortal = findViewById(R.id.btnCustomerPortal);
 
         btnMyInfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,7 +135,12 @@ public class adminhomepage extends AppCompatActivity {
         });
 
 
-
+        btnCustomerPortal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ListOfRunningSchemes.class));
+            }
+        });
 
 
 
