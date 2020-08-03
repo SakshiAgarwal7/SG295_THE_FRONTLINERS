@@ -30,10 +30,15 @@ public class ListOfRunningSchemes extends AppCompatActivity {
 
     //the listview
     ListView listView;
+    AddScheme addScheme;
 
-    //list to store uploads data
-    List<AddScheme> uploadList;
-    ArrayList<String> arrayList = new ArrayList<>();
+
+
+    //
+//    //list to store uploads data
+//    List<AddScheme> uploadList;
+    ArrayList<String> list;
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,51 +46,22 @@ public class ListOfRunningSchemes extends AppCompatActivity {
         setContentView(R.layout.activity_list_of_running_schemes);
 
         firebaseDatabase=FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference();
-        DSchemes = databaseReference.child("Schemes");
+        databaseReference = firebaseDatabase.getReference("Schemes");
+
+        addScheme = new AddScheme();
 
         listView = findViewById(R.id.listView);
-        uploadList = new ArrayList<>();
-        listView = (ListView) findViewById(R.id.listView);
+        list= new ArrayList<>();
+        adapter = new ArrayAdapter<String>(this,R.layout.scheme_info,R.id.SchemeInfo,list);
 
-//        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
-//                android.R.layout.simple_list_item_1,
-//                arrayList);
-//        listView.setAdapter(arrayAdapter);
-
-
-        //adding a clicklistener on listview
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //getting the upload
-                AddScheme addScheme = uploadList.get(i);
-
-                //Opening the upload file in browser using the upload url
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(addScheme.getPdfURL()));
-                startActivity(intent);
-            }
-        });
-        DSchemes.addValueEventListener(new ValueEventListener() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    AddScheme addScheme = postSnapshot.getValue(AddScheme.class);
-                    uploadList.add(addScheme);
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    addScheme = ds.getValue(AddScheme.class);
+                    list.add("Scheme Name : "+addScheme.getSchemeName());
                 }
-
-                String[] uploads = new String[uploadList.size()];
-
-                for (int i = 0; i < uploads.length; i++) {
-                    uploads[i] = uploadList.get(i).getSchemeName();
-                }
-
-                //displaying it to list
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, uploads);
                 listView.setAdapter(adapter);
-
-
             }
 
             @Override
@@ -93,5 +69,9 @@ public class ListOfRunningSchemes extends AppCompatActivity {
 
             }
         });
+
+
+
+
     }
 }

@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -145,26 +146,26 @@ public class UploadNewSchemes extends AppCompatActivity implements AdapterView.O
 
 
 
-//                if(TextUtils.isEmpty(SchemeName)){
-//                    editSchemeName.setError("SchemeName is required");
-//                    return;
-//                }
-//                if(TextUtils.isEmpty(DepartmentName)){
-//                    editDepartmentName.setError("SchemeName is required");
-//                    return;
-//                }
-//                if(TextUtils.isEmpty(DivisionName)){
-//                    editDivisionName.setError("SchemeName is required");
-//                    return;
-//                }
-//                if(TextUtils.isEmpty(SchemeDescription)){
-//                    editSchemeDescription.setError("SchemeName is required");
-//                    return;
-//                }
-//                if(TextUtils.isEmpty(IncomeLevel)){
-//                    editIncomeLevel.setError("SchemeName is required");
-//                    return;
-//                }
+                if(TextUtils.isEmpty(SchemeName)){
+                    editSchemeName.setError("SchemeName is required");
+                    return;
+                }
+                if(TextUtils.isEmpty(DepartmentName)){
+                    editDepartmentName.setError("SchemeName is required");
+                    return;
+                }
+                if(TextUtils.isEmpty(DivisionName)){
+                    editDivisionName.setError("SchemeName is required");
+                    return;
+                }
+                if(TextUtils.isEmpty(SchemeDescription)){
+                    editSchemeDescription.setError("SchemeName is required");
+                    return;
+                }
+                if(TextUtils.isEmpty(IncomeLevel)){
+                    editIncomeLevel.setError("SchemeName is required");
+                    return;
+                }
 
 
                 id++;
