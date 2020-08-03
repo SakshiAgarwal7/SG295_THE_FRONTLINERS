@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GraphFlow"></activity>
         <activity android:name=".userprofile2" />
         <activity android:name=".ListYouApply" />
         <activity android:name=".helpdesk2" />
