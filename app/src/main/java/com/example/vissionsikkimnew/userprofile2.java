@@ -1,24 +1,24 @@
 package com.example.vissionsikkimnew;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class helpdesk1 extends AppCompatActivity {
-    Button btnSubmit;
+public class userprofile2 extends AppCompatActivity {
+    Button btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_helpdesk1);
+        setContentView(R.layout.activity_userprofile2);
 
-        btnSubmit=(Button) findViewById(R.id.btnSubmit);
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
+        btnBack=(Button) findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(helpdesk1.this, helpdesk2.class);
+                Intent intent=new Intent(userprofile2.this, userhomepage.class);
                 startActivity(intent);
             }
         });

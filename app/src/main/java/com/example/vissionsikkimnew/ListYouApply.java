@@ -1,14 +1,14 @@
 package com.example.vissionsikkimnew;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class category3 extends AppCompatActivity {
+import android.os.Bundle;
+
+public class ListYouApply extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category3);
+        setContentView(R.layout.activity_list_you_apply);
     }
 }
